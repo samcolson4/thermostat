@@ -3,7 +3,7 @@ class Thermostat {
     this.temperature = 20
   }
 
-  getTemperature() {
+  temperature() {
     return this.temperature;
   }
   

@@ -15,9 +15,9 @@ You can ask about the thermostat's current energy usage: < 18 is low-usage, <= 2
 
 
 Starting value temperature = 20
-Function up
-Function down
-Min. temp = 10
+Function up (function)
+Function down (function)
+Min. temp = 10 (variable)
 Power Saving Mode = on(25max)/off(32max)
   - can be also completely turned off, on by default
 Reset to default temperature 
@@ -28,5 +28,15 @@ Current Energy Usage: < low(18)   -> green
 
 
 
-INPUT       |       OUTPUT
+INPUT    |      OUTPUT
+20                20
++5                25
+-5                15
 
+
+ _this_ ALWAYS refers to (and holds the value of) an object—a singular object—and it is usually used inside a function or a method
+  -> although it can be used outside a function in the global scope. Note that when we use strict mode, this holds the value of _undefined_ in global functions
+
+_this_ inside of function contains the object that invokes function
+
+_this_ is not assigned a value until an object invokes the function where this is defined
