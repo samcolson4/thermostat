@@ -32,7 +32,7 @@ INPUT    |      OUTPUT
 20                20
 +5                25
 -5                15
-
+18             low-usage
 
  _this_ ALWAYS refers to (and holds the value of) an object—a singular object—and it is usually used inside a function or a method
   -> although it can be used outside a function in the global scope. Note that when we use strict mode, this holds the value of _undefined_ in global functions

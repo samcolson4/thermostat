@@ -64,6 +64,28 @@ describe('Thermostat', function() {
   })
 
 
+  //Current Energy Usage: < low(18) 
+  //<= medium(25) 
+  //> high
+
+  describe('energyUsage', function() {
+    it('can be low usage', function() {
+      thermostat.decrease(5);
+      expect(thermostat.energyUsage()).toBe ('low')
+    })
+    it('can be medium usage', function() {
+      thermostat.increase(5);
+      expect(thermostat.energyUsage()).toBe ('medium')
+    })
+
+    it('can be high usage', function() {
+      thermostat.switchMode();
+      thermostat.increase(25);
+      expect(thermostat.energyUsage()).toBe ('high')
+    })
+    //if in  power mode, it cannot go to high
+
+  })
 
 
 
