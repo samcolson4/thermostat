@@ -11,7 +11,10 @@ describe('Thermostat', function() {
     expect(thermostat.temperature).toEqual(20);
   });
 
-  
+  it('should have a power saving mode', function () {
+    let thermostat = new Thermostat(); // 'let' because I don't want global variable
+    expect(thermostat.powerSavingMode).toEqual(true);
+  });
 
   describe('increase', function() {
     let thermostat = new Thermostat();

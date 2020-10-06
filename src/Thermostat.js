@@ -1,12 +1,14 @@
 class Thermostat {
   constructor() {
     this.temperature = 20
+    this.powerSavingMode = true
   }
 
   temperature() {
     return this.temperature;
   }
   
+
   increase(value) {
     this.temperature += value
   }
