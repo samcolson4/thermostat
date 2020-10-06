@@ -56,7 +56,12 @@ describe('Thermostat', function() {
     })
   })
 
-
+  describe('reset', function() {
+    it('can reset the temperature to default temperature', function() {
+      thermostat.reset();
+      expect(thermostat.temperature).toEqual(20)
+    })
+  })
 
 
 
