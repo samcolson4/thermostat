@@ -13,6 +13,8 @@ class Thermostat {
  
   decrease(value) {
     this.temperature -= value
+    if(this.temperature < 10) {
+    this.temperature = 10 } // resetting to ten
   }
 
 
