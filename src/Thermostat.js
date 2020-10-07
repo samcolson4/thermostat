@@ -47,11 +47,12 @@ class Thermostat {
     }
   }
 
-
-
-
-
-
+  powerSavingCheck() {
+    if(this.powerSavingMode == true) {
+      return "Power saving mode is on."
+    } else if(this.powerSavingMode == false) {
+      return "Power saving mode is off."
+    }
+  }
 
 }
-
