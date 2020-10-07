@@ -1,5 +1,6 @@
+'use strict'; // higher standard of JS, eliminates silent errors
+
 describe('Thermostat', function() {
-// Starting value temperature = 20
   let thermostat
 
   beforeEach(function() {
@@ -7,7 +8,7 @@ describe('Thermostat', function() {
 
   })
   
-  it('should have a start temperature value of', function () {
+  it('should have a start temperature value of 20', function () {
     expect(thermostat.temperature).toEqual(20);
   });
 
