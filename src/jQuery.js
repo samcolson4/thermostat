@@ -31,4 +31,20 @@ $(document).ready(function() {
     $('#energyUsage').text(thermostat.energyUsage());
   })
 
+  displayWeather('London');
+
+  $('#select-city').submit(function(event) {
+    event.preventDefault();
+    var city = $('#current-city').val();
+    displayWeather(city);
+  })
+
+  function displayWeather(city) {
+    var url = 'http://api.openweathermap.org/data/2.5/weather?q=' + city;
+    var token = '&appid=79734182354473bd1378b3db74651f2d';
+    var units = '&units=metric';
+    $.get(url + token + units, function(data) {
+      $('#current-temperature').text(data.main.temp);
+    })
+  }
 })
