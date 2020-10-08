@@ -1,9 +1,11 @@
 $(function () {
+
   var thermostat = new Thermostat();
   energyColor();
   switchSymobls();
 
-  $('#temperature').text(thermostat.temperature);
+  // $('#temperature').text(thermostat.temperature);
+  getTemperature()
   $('#energyUsage').text(thermostat.energyUsage());
   $('#powersaving').text(thermostat.powerSavingCheck());
   
@@ -49,6 +51,13 @@ $(function () {
     var units = '&units=metric';
     $.get(url + token + units, function(data) {
       $('#current-temperature').text(data.main.temp);
+    })
+  }
+
+  function getTemperature() {
+    var url = 'http://localhost:9292/temp'
+    $.get(url, function(data) {
+      $('#temperature').text(data.temp);
     })
   }
   
