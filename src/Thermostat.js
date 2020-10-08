@@ -3,7 +3,7 @@
 class Thermostat {
   constructor() {
     this.temperature = 20
-    this.powerSavingMode = true
+    this.powerSavingMode = false
   }
 
   increase(value) {
